@@ -4,7 +4,8 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.demo",
+  "applicationId": "com.shopping.tapumi",
+
   "variantName": "release",
   "elements": [
     {
