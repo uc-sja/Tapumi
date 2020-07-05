@@ -1,4 +1,4 @@
-package com.shopping.tapumi;
+package com.utility.tapumi;
 
 import org.junit.Test;
 

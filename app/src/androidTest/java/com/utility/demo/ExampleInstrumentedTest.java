@@ -1,4 +1,4 @@
-package com.shopping.tapumi;
+package com.utility.tapumi;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.shopping.tapumi", appContext.getPackageName());
+        assertEquals("com.utility.tapumi", appContext.getPackageName());
     }
 }

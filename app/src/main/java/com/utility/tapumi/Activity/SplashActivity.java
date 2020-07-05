@@ -1,4 +1,4 @@
-package com.shopping.tapumi.Activity;
+package com.utility.tapumi.Activity;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;

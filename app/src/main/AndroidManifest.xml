@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.shopping.tapumi">
+    package="com.utility.tapumi">
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -15,10 +15,10 @@
         <activity
             android:hardwareAccelerated="true"
             android:launchMode="singleTask"
-            android:name="com.shopping.tapumi.Activity.MainActivity"/>
+            android:name="com.utility.tapumi.Activity.MainActivity"/>
 
         <activity
-            android:name="com.shopping.tapumi.Activity.SplashActivity"
+            android:name="com.utility.tapumi.Activity.SplashActivity"
             android:theme="@style/SplashScreenTheme">
 
             <intent-filter>

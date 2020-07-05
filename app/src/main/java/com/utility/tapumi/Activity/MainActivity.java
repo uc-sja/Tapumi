@@ -1,4 +1,4 @@
-package com.shopping.tapumi.Activity;
+package com.utility.tapumi.Activity;
 
 import android.app.ProgressDialog;
 import android.os.Build;
@@ -14,7 +14,7 @@ import android.widget.ProgressBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import com.shopping.tapumi.R;
+import com.utility.tapumi.R;
 
 import im.delight.android.webview.AdvancedWebView;
 
