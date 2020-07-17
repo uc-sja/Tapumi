@@ -14,6 +14,7 @@ import android.widget.ProgressBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.utility.tapumi.R;
 
 import im.delight.android.webview.AdvancedWebView;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private AdvancedWebView webView;
     private ProgressDialog progressDialog;
     private ProgressBar progressBar;
+    private LottieAnimationView loadingView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         //Creation of the Webview found in the XML Layout file
         webView = findViewById(R.id.webview);
         progressBar = findViewById(R.id.progressbar);
+        loadingView = findViewById(R.id.loading_view);
 
         //Enable Javascripts
 
@@ -65,10 +68,12 @@ public class MainActivity extends AppCompatActivity {
                 progressBar.setProgress(progress);
                 if (progress == 100) {
                     progressBar.setVisibility(View.GONE);
+                    loadingView.setVisibility(View.GONE);
 
                 } else {
 
                     progressBar.setVisibility(View.VISIBLE);
+                    loadingView.setVisibility(View.VISIBLE);
 
                 }
             }
@@ -89,10 +94,6 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
     }
-
-
-
-
 
 
     @Override
