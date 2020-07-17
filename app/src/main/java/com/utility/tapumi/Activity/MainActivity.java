@@ -1,8 +1,10 @@
 package com.utility.tapumi.Activity;
 
 import android.app.ProgressDialog;
+import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private ProgressDialog progressDialog;
     private ProgressBar progressBar;
     private LottieAnimationView loadingView;
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,13 +68,13 @@ public class MainActivity extends AppCompatActivity {
         webView.setWebChromeClient(new WebChromeClient() {
 
             public void onProgressChanged(WebView view, int progress) {
-                progressBar.setProgress(progress);
-                if (progress == 100) {
+                progressBar.setProgress(view.getProgress());
+                if (view.getProgress() == 100) {
+                    Log.d(TAG, "onProgressChanged: "+progress);
                     progressBar.setVisibility(View.GONE);
                     loadingView.setVisibility(View.GONE);
 
                 } else {
-
                     progressBar.setVisibility(View.VISIBLE);
                     loadingView.setVisibility(View.VISIBLE);
 
@@ -92,6 +95,12 @@ public class MainActivity extends AppCompatActivity {
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             view.loadUrl(url);
             return true;
+        }
+
+        @Override
+        public void onPageStarted(WebView view, String url, Bitmap favicon) {
+            super.onPageStarted(view, url, favicon);
+            loadingView.setVisibility(View.VISIBLE);
         }
     }
 
