@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressbar);
         loadingView = findViewById(R.id.loading_view);
 
-        //Enable Javascripts
+        //Enable Jgit avascripts
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
